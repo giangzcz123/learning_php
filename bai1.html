@@ -1,4 +1,5 @@
 <html>
+  <link href="css/style.css" rel="stylesheet" />
   <head>
     <title>Bài thơ</title>
   </head>
@@ -29,7 +30,7 @@
       <li>Cá</li>
       <li>Tôm</li>
     </ol>
-    <h1>5 thằng ngu</h1>
+    <h1>5 người</h1>
     <ol>
       <li>Minh múp</li>
       <li>Lăng cọc</li>
@@ -44,8 +45,8 @@
       <li><a href="https://translate.google.com/">Google Translate</a></li>
       <li><a href="https://mail.google.com/mail/?tab=rm&ogbl">Gmail</a></li>
     </ul>
-    <table border="1">
-      <thead>
+    <table>
+      <thead class="headtable">
         <tr>
           <th>STT</th>
           <th>Họ và tên</th>
@@ -79,9 +80,9 @@
           <td align="center">3</td>
         </tr>
       </tbody>
-      <tfoot>
-        <td colspan="4" align="center">Tổng số người: 4</td>
-      </tfoot>
+      <caption>
+        Tổng số người: 4
+      </caption>
     </table>
     <img
       src="https://avatars.githubusercontent.com/u/242140827?s=96&v=4"
@@ -131,18 +132,23 @@
         <td><b>Khá</b></td>
       </tr>
     </table>
-
+    <br />
     <form>
-      <fieldset>
-        <legend>Đăng nhập</legend>
-        <label for="username">Tên đăng nhập:</label>
-        <input type="text" id="username" name="username" required />
-        <br />
-        <label for="password">Mật khẩu:</label>
-        <input type="password" id="password" name="password" required />
-        <br />
-        <input type="submit" value="Đăng nhập" />
-      </fieldset>
+      <legend>Form đăng nhập</legend>
+      <div class="input-group">
+        <span class="input-icon">👤</span>
+        <input type="text" placeholder="Tên đăng nhập" />
+      </div>
+
+      <div class="input-group">
+        <span class="input-icon">🔑</span>
+        <input type="password" placeholder="Mật khẩu" />
+      </div>
+      <div class="helper-row">
+        <a href="#">Quên mật khẩu</a>
+        <a href="#">Trợ giúp!</a>
+      </div>
+      <button type="submit" class="btn-primary">ĐĂNG NHẬP</button>
     </form>
   </body>
 </html>
