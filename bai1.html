@@ -1,14 +1,16 @@
 <html>
+  <link href="css/style.css" rel="stylesheet" />
   <head>
     <title>Bài thơ</title>
   </head>
   <body>
-    <h1>Công cha như núi Thái Sơn</h1>
+    <h1>Nhóm 11</h1>
     <pre>
-      Công cha như núi Thái Sơn,
-      Nghĩa mẹ như nước trong nguồn chảy ra,
-      Một lòng thờ mẹ kính cha
-      Cho tròn chữ hiếu mới là đạo con.
+      Nguyễn Hoàng Hải
+      Vũ Huy Nguyên
+      Hoàng Võ Huy Hoàng
+      Lê Đình Quốc Huy
+      Nguyễn Trường Giang
     </pre>
     <p>
       (x<sub>1</sub> + x<sub>2</sub>)<sup>2</sup> = x<sub>1</sub><sup>2 </sup> +
@@ -28,7 +30,7 @@
       <li>Cá</li>
       <li>Tôm</li>
     </ol>
-    <h1>5 thằng ngu</h1>
+    <h1>5 người</h1>
     <ol>
       <li>Minh múp</li>
       <li>Lăng cọc</li>
@@ -43,8 +45,8 @@
       <li><a href="https://translate.google.com/">Google Translate</a></li>
       <li><a href="https://mail.google.com/mail/?tab=rm&ogbl">Gmail</a></li>
     </ul>
-    <table border="1">
-      <thead>
+    <table>
+      <thead class="headtable">
         <tr>
           <th>STT</th>
           <th>Họ và tên</th>
@@ -78,13 +80,84 @@
           <td align="center">3</td>
         </tr>
       </tbody>
-      <tfoot>
-        <td colspan="4" align="center">Tổng số thằng ngu: 3</td>
-      </tfoot>
+      <caption>
+        Tổng số người: 4
+      </caption>
     </table>
     <img
       src="https://avatars.githubusercontent.com/u/242140827?s=96&v=4"
       alt="Mr.Gold"
     />
+    <table border="2" cellpadding="5" cellspacing="0">
+      <tr>
+        <th>ID</th>
+        <th>Họ và tên</th>
+        <th>Điểm</th>
+        <th>Xếp loại</th>
+      </tr>
+
+      <tr>
+        <td colspan="4"><b>Khóa A</b></td>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>Trần Tiến Tài</td>
+        <td>7</td>
+        <td rowspan="2">Khá</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Phạm Mạnh Khoa</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td colspan="4"><b>Khóa B</b></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Trần Văn Hưng</td>
+        <td>5</td>
+        <td>Trung bình</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Đỗ Đức Thành</td>
+        <td>10</td>
+        <td>Giỏi</td>
+      </tr>
+      <tr>
+        <td colspan="2"><b>TỔNG CỘNG</b></td>
+        <td><b>7.5</b></td>
+        <td><b>Khá</b></td>
+      </tr>
+    </table>
+    <br />
+    <form>
+      <legend>Form đăng nhập</legend>
+      <div class="input-group">
+        <span class="input-icon">👤</span>
+        <input type="text" placeholder="Tên đăng nhập" />
+      </div>
+
+      <div class="input-group">
+        <span class="input-icon">🔑</span>
+        <input type="password" placeholder="Mật khẩu" />
+      </div>
+      <label for="cities"></label>
+      <select id="cities" name="cities">
+        <option value="Hà Nội" disabled selected>Chọn thành phố</option>
+        <option value="Hà Nội">Hà Nội</option>
+        <option value="Hà Nội">Vĩnh Phúc</option>
+        <option value="Hà Nội">Hải Dương</option>
+        <option value="Hà Nội">Hải Phòng</option>
+        <option value="Hà Nội">Hà Tĩnh</option>
+      </select>
+      <div class="helper-row">
+        <a href="#">Quên mật khẩu</a>
+        <a href="#">Trợ giúp!</a>
+      </div>
+      <button type="submit" class="btn-primary">ĐĂNG NHẬP</button>
+    </form>
   </body>
 </html>
