@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <title>Demo JS</title>
+  </head>
+  <body>
+    <script src="demo.js"></script>
+    <h2>demo function</h2>
+    <p id="ketQua"></p>
+    <button id="btnTest" onclick="alert('Hello Button Test')">
+      Nút test Alert
+    </button>
+    <button
+      id="btnConfirmTest"
+      onclick="confirm('Bạn có muốn xóa dữ liệu không')"
+    >
+      Nút test confirm
+    </button>
+    <button id="demoHover">Nút chạm</button>
+    <input type="text" id="inputBox" placeholder="Nhập tên thành phố" />
+
+    <script>
+      document
+        .getElementById("demoHover")
+        .addEventListener("mouseover", function () {
+          alert("bạn đã chạm vào nút");
+        });
+    </script>
+  </body>
+</html>
