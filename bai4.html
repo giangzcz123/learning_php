@@ -17,13 +17,67 @@
     </button>
     <button id="demoHover">Nút chạm</button>
     <input type="text" id="inputBox" placeholder="Nhập tên thành phố" />
-
+    <form id="myForm">
+      <input type="text" id="name" placeholder="Nhập tên" />
+      <button type="submit">Gửi</button>
+    </form>
     <script>
       document
         .getElementById("demoHover")
         .addEventListener("mouseover", function () {
           alert("bạn đã chạm vào nút");
         });
+      document
+        .getElementById("inputBox")
+        .addEventListener("keydown", function (event) {
+          console.log("Nhập tên thành phố", event.key);
+        });
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          let name = document.getElementById("name").value;
+          if (name === "") {
+            alert("Vui lòng nhập tên!");
+            event.preventDefault(); //Ngăn gửi form
+          }
+        });
     </script>
+    <style>
+      .highlight {
+        color: red;
+        font-weight: bold;
+      }
+      #text {
+        color: blue;
+        font-size: 20px;
+        font-weight: bold;
+        margin: 20px;
+      }
+    </style>
+    <h1 id="title">Xin chào DOM!</h1>
+    <p class="description">Đây là một đoạn văn có class.</p>
+    <p class="description">Đây là đoạn văn thứ hai có cùng class.</p>
+
+    <button onclick="changeText()">Thay đổi nội dung</button>
+
+    <ul id="list">
+      <li>Phần tử 1</li>
+      <li>Phần tử 2</li>
+      <li>Phần tử 3</li>
+    </ul>
+    <div id="container">
+      <img
+        id="image"
+        src="binhgold.png"
+        alt="Hình ảnh ban đầu"
+        style="width: 200px"
+      />
+      <button onclick="replaceElement()">Thay thế hình ảnh</button>
+    </div>
+    <p id="text">Đây là đoạn văn bản.</p>
+    <button onclick="getStyle()">📌 Lấy style</button>
+    <button onclick="setStyle()">🎨 Gán style</button>
+
+    <p id="result"></p>
   </body>
 </html>
