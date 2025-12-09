@@ -77,7 +77,34 @@
     <p id="text">Đây là đoạn văn bản.</p>
     <button onclick="getStyle()">📌 Lấy style</button>
     <button onclick="setStyle()">🎨 Gán style</button>
-
     <p id="result"></p>
+    <h2>Đăng nhập</h2>
+    <form id="loginform">
+      <label
+        >Username:
+        <input type="text" id="username" />
+      </label>
+      <br /><br />
+      <label>Password: <input type="password" id="password" /> </label>
+      <br /><br />
+      <button type="submit">Login</button>
+    </form>
+    <div id="message"></div>
+    <script>
+      const form = document.getElementById("loginform");
+      const messageDiv = document.getElementById("message");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+        if (username === "" || password === "") {
+          messageDiv.textContent = "Vui lòng nhập đầy đủ username và password!";
+          messageDiv.style.color = "red";
+        } else {
+          messageDiv.textContent = "Đăng nhập thành công!";
+          messageDiv.style.color = "green";
+        }
+      });
+    </script>
   </body>
 </html>
