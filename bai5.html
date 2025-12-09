@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <link href="css/style.css" rel="stylesheet" />
+  <script src="js/bai5.js" defer></script>
+  <body>
+    <form id="myForm">
+      <legend>Form đăng nhập</legend>
+      <div class="input-group">
+        <span class="input-icon">👤</span>
+        <input id="name" type="text" placeholder="Tên đăng nhập" />
+      </div>
+
+      <div class="input-group">
+        <span class="input-icon">🔑</span>
+        <input id="password" type="password" placeholder="Mật khẩu" />
+      </div>
+      <div>
+        <select id="city" style="margin-top: 8px; margin-bottom: 18px">
+          <option value="">-- Chọn thành phố --</option>
+          <option value="Hà Nội">Hà Nội</option>
+          <option value="Hồ Chí Minh">TP. Hồ Chí Minh</option>
+          <option value="Đà Nẵng">Đà Nẵng</option>
+          <option value="Hải Phòng">Hải Phòng</option>
+          <option value="Cần Thơ">Cần Thơ</option>
+        </select>
+      </div>
+      <div class="helper-row">
+        <a href="#">Quên mật khẩu</a>
+        <a href="#">Trợ giúp!</a>
+      </div>
+      <button id="signUp" type="submit" class="btn-primary" onclick="getTT()">
+        ĐĂNG NHẬP
+      </button>
+    </form>
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          let name = document.getElementById("name").value;
+          let password = document.getElementById("password").value;
+          if (name === "" && password === "") {
+            alert("Vui lòng nhập đầy đủ họ tên và mật khẩu !");
+            event.preventDefault(); //ngăn gửi form;
+          }
+        });
+    </script>
+  </body>
+</html>
