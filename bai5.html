@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <link href="css/style.css" rel="stylesheet" />
-  <script src="js/bai5.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form đăng nhập</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
   <body>
-    <form id="myForm">
+    <form id="myForm" style="margin: 35px auto">
       <legend>Form đăng nhập</legend>
       <div class="input-group">
         <span class="input-icon">👤</span>
@@ -14,6 +17,7 @@
         <span class="input-icon">🔑</span>
         <input id="password" type="password" placeholder="Mật khẩu" />
       </div>
+
       <div>
         <select id="city" style="margin-top: 8px; margin-bottom: 18px">
           <option value="">-- Chọn thành phố --</option>
@@ -24,26 +28,63 @@
           <option value="Cần Thơ">Cần Thơ</option>
         </select>
       </div>
+
       <div class="helper-row">
         <a href="#">Quên mật khẩu</a>
         <a href="#">Trợ giúp!</a>
       </div>
-      <button id="signUp" type="submit" class="btn-primary" onclick="getTT()">
-        ĐĂNG NHẬP
-      </button>
+
+      <button id="signUp" type="submit" class="btn-primary">ĐĂNG NHẬP</button>
     </form>
+
+    <div id="message"></div>
+
     <script>
-      document
-        .getElementById("myForm")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
-          let name = document.getElementById("name").value;
-          let password = document.getElementById("password").value;
-          if (name === "" && password === "") {
-            alert("Vui lòng nhập đầy đủ họ tên và mật khẩu !");
-            event.preventDefault(); //ngăn gửi form;
-          }
-        });
+      const form = document.getElementById("myForm");
+      const messageDiv = document.getElementById("message");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const username = document.getElementById("name").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const city = document.getElementById("city").value;
+        messageDiv.classList.remove("error", "success");
+
+        if (username === "" && password === "" && city === "") {
+          messageDiv.textContent =
+            "Vui lòng nhập đầy đủ tên đăng nhập, mật khẩu và chọn thành phố!";
+          messageDiv.classList.add("error");
+          messageDiv.style.display = "block";
+          return;
+        }
+
+        if (username === "") {
+          messageDiv.textContent = "Vui lòng nhập tên đăng nhập!";
+          messageDiv.classList.add("error");
+          messageDiv.style.display = "block";
+          return;
+        }
+
+        if (password === "") {
+          messageDiv.textContent = "Vui lòng nhập mật khẩu!";
+          messageDiv.classList.add("error");
+          messageDiv.style.display = "block";
+          return;
+        }
+
+        if (city === "") {
+          messageDiv.textContent = "Vui lòng chọn thành phố!";
+          messageDiv.classList.add("error");
+          messageDiv.style.display = "block";
+          return;
+        }
+
+        messageDiv.textContent =
+          "Đăng nhập thành công cho " + username + " (" + city + ")!";
+        messageDiv.classList.add("success");
+        messageDiv.style.display = "block";
+      });
     </script>
   </body>
 </html>

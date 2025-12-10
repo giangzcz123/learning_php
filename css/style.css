@@ -115,5 +115,24 @@ caption {
   font-weight: bold;
 }
 #message {
-  background-color: green;
+  margin: 35px auto;
+  width: 330px;
+  margin-top: 15px;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  min-width: 260px;
+  display: none;
+}
+
+.error {
+  background-color: #ffe0e0;
+  color: #c30000;
+  border: 1px solid #ff5c5c;
+}
+.success {
+  background-color: #e6ffe6;
+  color: #057a00;
+  border: 1px solid #28b300;
 }
