@@ -114,3 +114,6 @@ caption {
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
 }
+#message {
+  background-color: green;
+}
